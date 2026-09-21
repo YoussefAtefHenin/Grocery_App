@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:grocery_app/screens/account_screen.dart';
 import 'package:grocery_app/screens/cart_screen.dart';
 import 'package:grocery_app/screens/explore_screen.dart';
@@ -14,6 +15,7 @@ class BottomNavBarScreen extends StatefulWidget {
 
 class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
   int currentIndex = 0;
+
   List<Widget> screens = [
     ShopScreen(),
     ExploreScreen(),
@@ -21,6 +23,7 @@ class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
     FavoriteScreen(),
     AccountScreen(),
   ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,9 +32,9 @@ class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         backgroundColor: Colors.white,
-        selectedItemColor: Color(0xff53B175),
-        unselectedItemColor: Color(0xff181725),
-        iconSize: 24,
+        selectedItemColor: const Color(0xff53B175),
+        unselectedItemColor: const Color(0xff181725),
+        iconSize: 24.sp,
         currentIndex: currentIndex,
         onTap: (index) {
           setState(() {
@@ -39,21 +42,24 @@ class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
           });
         },
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.storefront), label: "Shop"),
           BottomNavigationBarItem(
-            icon: Icon(Icons.manage_search),
+            icon: Icon(Icons.storefront, size: 24.sp),
+            label: "Shop",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.manage_search, size: 24.sp),
             label: "Explore",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart_outlined),
+            icon: Icon(Icons.shopping_cart_outlined, size: 24.sp),
             label: "Cart",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.favorite_outline),
+            icon: Icon(Icons.favorite_outline, size: 24.sp),
             label: "Favorite",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person_3_outlined),
+            icon: Icon(Icons.person_3_outlined, size: 24.sp),
             label: "Account",
           ),
         ],

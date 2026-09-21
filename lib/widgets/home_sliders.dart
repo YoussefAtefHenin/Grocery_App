@@ -1,10 +1,12 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class HomeSliders extends StatefulWidget {
   double height;
   List<String> images;
+
   HomeSliders({super.key, required this.height, required this.images});
 
   @override
@@ -13,6 +15,7 @@ class HomeSliders extends StatefulWidget {
 
 class _HomeSlidersState extends State<HomeSliders> {
   int activetIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -20,7 +23,7 @@ class _HomeSlidersState extends State<HomeSliders> {
       children: [
         CarouselSlider(
           options: CarouselOptions(
-            height: widget.height,
+            height: widget.height.h,
             autoPlay: true,
             viewportFraction: 1,
             enableInfiniteScroll: false,
@@ -35,7 +38,7 @@ class _HomeSlidersState extends State<HomeSliders> {
                 (i) => Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
+                    borderRadius: BorderRadius.circular(15.r),
                     image: DecorationImage(
                       fit: BoxFit.fill,
                       image: Image.network(i).image,
@@ -45,17 +48,18 @@ class _HomeSlidersState extends State<HomeSliders> {
               )
               .toList(),
         ),
+
         Positioned(
-          bottom: 10,
+          bottom: 10.h,
           child: AnimatedSmoothIndicator(
             activeIndex: activetIndex,
             count: widget.images.length,
             effect: ExpandingDotsEffect(
               dotColor: Colors.white,
-              activeDotColor: Color(0xff53B175),
-              dotWidth: 10,
-              dotHeight: 10,
-              spacing: 5,
+              activeDotColor: const Color(0xff53B175),
+              dotWidth: 10.w,
+              dotHeight: 10.h,
+              spacing: 5.w,
             ),
           ),
         ),
@@ -63,9 +67,3 @@ class _HomeSlidersState extends State<HomeSliders> {
     );
   }
 }
-
-// List<String> images = [
-//   "https://i.pinimg.com/736x/08/de/f4/08def4297940226f4bf8e87eac76405b.jpg",
-//   "https://i.pinimg.com/1200x/83/35/b5/8335b51ac60872f87269bd5682ca9c53.jpg",
-//   "https://i.pinimg.com/1200x/e9/b1/67/e9b16750a87a69e8d182899c1a3fed8d.jpg",
-// ];

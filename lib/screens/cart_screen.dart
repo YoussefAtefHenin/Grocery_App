@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:grocery_app/widgets/cart_option.dart';
 import 'package:grocery_app/widgets/custom_button.dart';
 import 'package:grocery_app/widgets/checkout_bottom_sheet.dart';
@@ -10,25 +11,25 @@ class CartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
+        padding: EdgeInsets.symmetric(horizontal: 20.w),
         child: Column(
           children: [
-            const SizedBox(height: 15),
+            SizedBox(height: 15.h),
 
-            const Center(
+            Center(
               child: Text(
                 "My Cart",
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 20.sp,
                   fontWeight: FontWeight.bold,
-                  color: Color(0xff181725),
+                  color: const Color(0xff181725),
                 ),
               ),
             ),
 
-            const SizedBox(height: 20),
+            SizedBox(height: 20.h),
 
-            const Divider(thickness: 1.5, color: Color(0xffE2E2E2)),
+            Divider(thickness: 1.5.w, color: const Color(0xffE2E2E2)),
 
             Column(
               children: [
@@ -62,7 +63,7 @@ class CartScreen extends StatelessWidget {
               ],
             ),
 
-            const SizedBox(height: 25),
+            SizedBox(height: 25.h),
 
             CustomButton(
               text: "Go to Checkout",
@@ -78,7 +79,7 @@ class CartScreen extends StatelessWidget {
               },
             ),
 
-            const SizedBox(height: 25),
+            SizedBox(height: 25.h),
           ],
         ),
       ),

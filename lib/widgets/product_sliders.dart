@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class ProductSliders extends StatefulWidget {
@@ -25,17 +26,18 @@ class _ProductSlidersState extends State<ProductSliders> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: 10),
+        SizedBox(height: 10.h),
 
-        SizedBox(height: 30),
+        SizedBox(height: 30.h),
+
         SizedBox(
-          height: widget.height + 40,
-          width: widget.width,
+          height: widget.height.h + 40.h,
+          width: widget.width.w,
           child: Stack(
             children: [
               CarouselSlider(
                 options: CarouselOptions(
-                  height: widget.height,
+                  height: widget.height.h,
                   autoPlay: true,
                   viewportFraction: 1,
                   enableInfiniteScroll: false,
@@ -48,9 +50,9 @@ class _ProductSlidersState extends State<ProductSliders> {
                 items: widget.images
                     .map(
                       (i) => Container(
-                        width: widget.width,
+                        width: widget.width.w,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
+                          borderRadius: BorderRadius.circular(15.r),
                           image: DecorationImage(
                             fit: BoxFit.fill,
                             image: Image.asset(i).image,
@@ -62,7 +64,7 @@ class _ProductSlidersState extends State<ProductSliders> {
               ),
 
               Positioned(
-                top: widget.height + 30,
+                top: widget.height.h + 30.h,
                 left: 0,
                 right: 0,
                 bottom: 0,
@@ -72,10 +74,10 @@ class _ProductSlidersState extends State<ProductSliders> {
                     count: widget.images.length,
                     effect: ExpandingDotsEffect(
                       dotColor: Colors.white,
-                      activeDotColor: Color(0xff53B175),
-                      dotWidth: 10,
-                      dotHeight: 10,
-                      spacing: 5,
+                      activeDotColor: const Color(0xff53B175),
+                      dotWidth: 10.w,
+                      dotHeight: 10.h,
+                      spacing: 5.w,
                     ),
                   ),
                 ),

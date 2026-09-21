@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:grocery_app/widgets/custom_button.dart';
 
 class FilterScreen extends StatefulWidget {
@@ -25,71 +26,62 @@ class _FilterScreenState extends State<FilterScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            SizedBox(height: 8),
-
+            SizedBox(height: 8.h),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 25),
+              padding: EdgeInsets.symmetric(horizontal: 25.w),
               child: Row(
                 children: [
                   InkWell(
                     onTap: () {
                       Navigator.pop(context);
                     },
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(20.r),
                     child: Icon(
                       Icons.close,
-                      size: 30,
-                      color: Color(0xff181725),
+                      size: 30.sp,
+                      color: const Color(0xff181725),
                     ),
                   ),
-
-                  SizedBox(width: 119),
-
+                  SizedBox(width: 119.w),
                   Text(
                     "Filters",
                     style: TextStyle(
-                      fontSize: 23,
+                      fontSize: 23.sp,
                       fontWeight: FontWeight.bold,
-                      color: Color(0xff181725),
+                      color: const Color(0xff181725),
                     ),
                   ),
                 ],
               ),
             ),
-
-            SizedBox(height: 32),
-
+            SizedBox(height: 32.h),
             Expanded(
               child: Container(
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: Color(0xffF2F3F2),
+                  color: const Color(0xffF2F3F2),
                   borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(30),
-                    topRight: Radius.circular(30),
+                    topLeft: Radius.circular(30.r),
+                    topRight: Radius.circular(30.r),
                   ),
                 ),
-
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 25,
-                    vertical: 25,
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 25.w,
+                    vertical: 25.h,
                   ),
-
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         "Categories",
                         style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 20.sp,
                           fontWeight: FontWeight.bold,
-                          color: Color(0xff181725),
+                          color: const Color(0xff181725),
                         ),
                       ),
-
-                      SizedBox(height: 10),
-
+                      SizedBox(height: 10.h),
                       checkBox(
                         title: "Eggs",
                         value: eggs,
@@ -99,7 +91,6 @@ class _FilterScreenState extends State<FilterScreen> {
                           });
                         },
                       ),
-
                       checkBox(
                         title: "Noodles & Pasta",
                         value: noodles,
@@ -109,7 +100,6 @@ class _FilterScreenState extends State<FilterScreen> {
                           });
                         },
                       ),
-
                       checkBox(
                         title: "Chips & Crisps",
                         value: chips,
@@ -119,7 +109,6 @@ class _FilterScreenState extends State<FilterScreen> {
                           });
                         },
                       ),
-
                       checkBox(
                         title: "Fast Food",
                         value: fastFood,
@@ -129,20 +118,16 @@ class _FilterScreenState extends State<FilterScreen> {
                           });
                         },
                       ),
-
-                      SizedBox(height: 20),
-
+                      SizedBox(height: 20.h),
                       Text(
                         "Brand",
                         style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 20.sp,
                           fontWeight: FontWeight.bold,
-                          color: Color(0xff181725),
+                          color: const Color(0xff181725),
                         ),
                       ),
-
-                      SizedBox(height: 10),
-
+                      SizedBox(height: 10.h),
                       checkBox(
                         title: "Individual Collection",
                         value: individualCollection,
@@ -152,7 +137,6 @@ class _FilterScreenState extends State<FilterScreen> {
                           });
                         },
                       ),
-
                       checkBox(
                         title: "Cocola",
                         value: cocola,
@@ -162,7 +146,6 @@ class _FilterScreenState extends State<FilterScreen> {
                           });
                         },
                       ),
-
                       checkBox(
                         title: "Ifad",
                         value: ifad,
@@ -172,7 +155,6 @@ class _FilterScreenState extends State<FilterScreen> {
                           });
                         },
                       ),
-
                       checkBox(
                         title: "Kazi Farmas",
                         value: kaziFarmas,
@@ -182,7 +164,7 @@ class _FilterScreenState extends State<FilterScreen> {
                           });
                         },
                       ),
-                      SizedBox(height: 195),
+                      SizedBox(height: 195.h),
                       CustomButton(text: "Apply Filter", onTap: () {}),
                     ],
                   ),
@@ -203,25 +185,26 @@ class _FilterScreenState extends State<FilterScreen> {
     return InkWell(
       onTap: onTap,
       child: SizedBox(
-        height: 40,
+        height: 40.h,
         child: Row(
           children: [
             Checkbox(
               value: value,
               onChanged: (value) {},
-              activeColor: Color(0xff53B175),
-              side: BorderSide(color: Color(0xffBDBDBD), width: 1.2),
+              activeColor: const Color(0xff53B175),
+              side: BorderSide(color: const Color(0xffBDBDBD), width: 1.2.w),
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(5),
+                borderRadius: BorderRadius.circular(5.r),
               ),
             ),
-
             Text(
               title,
               style: TextStyle(
-                fontSize: 16,
+                fontSize: 16.sp,
                 fontWeight: FontWeight.w400,
-                color: value ? Color(0xff53B175) : Color(0xff181725),
+                color: value
+                    ? const Color(0xff53B175)
+                    : const Color(0xff181725),
               ),
             ),
           ],

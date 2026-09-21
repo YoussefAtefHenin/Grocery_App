@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CartOption extends StatelessWidget {
   final String image;
@@ -21,17 +22,17 @@ class CartOption extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: 12),
+          padding: EdgeInsets.symmetric(vertical: 12.h),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SizedBox(
-                width: 70,
-                height: 70,
+                width: 70.w,
+                height: 70.h,
                 child: Image.asset(image, fit: BoxFit.contain),
               ),
 
-              const SizedBox(width: 17),
+              SizedBox(width: 17.w),
 
               Expanded(
                 child: Column(
@@ -42,36 +43,36 @@ class CartOption extends StatelessWidget {
                         Expanded(
                           child: Text(
                             text,
-                            style: const TextStyle(
-                              fontSize: 16,
+                            style: TextStyle(
+                              fontSize: 16.sp,
                               fontWeight: FontWeight.w700,
-                              color: Color(0xff181725),
+                              color: const Color(0xff181725),
                             ),
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                           ),
                         ),
 
-                        const Icon(
+                        Icon(
                           Icons.close,
-                          size: 25,
-                          color: Color(0xffB3B3B3),
+                          size: 25.sp,
+                          color: const Color(0xffB3B3B3),
                         ),
                       ],
                     ),
 
-                    const SizedBox(height: 2),
+                    SizedBox(height: 2.h),
 
                     Text(
                       quantity,
-                      style: const TextStyle(
-                        fontSize: 14,
+                      style: TextStyle(
+                        fontSize: 14.sp,
                         fontWeight: FontWeight.w400,
-                        color: Color(0xff7C7C7C),
+                        color: const Color(0xff7C7C7C),
                       ),
                     ),
 
-                    const SizedBox(height: 12),
+                    SizedBox(height: 12.h),
 
                     Row(
                       children: [
@@ -79,58 +80,59 @@ class CartOption extends StatelessWidget {
                           child: Row(
                             children: [
                               Container(
-                                width: 45,
-                                height: 45,
+                                width: 45.w,
+                                height: 45.h,
                                 decoration: BoxDecoration(
                                   border: Border.all(
                                     color: const Color(0xffE2E2E2),
                                   ),
-                                  borderRadius: BorderRadius.circular(17),
+                                  borderRadius: BorderRadius.circular(17.r),
                                 ),
-                                child: const Icon(
+                                child: Icon(
                                   Icons.remove,
-                                  size: 35,
-                                  color: Color(0xffB3B3B3),
+                                  size: 35.sp,
+                                  color: const Color(0xffB3B3B3),
                                 ),
                               ),
 
-                              const SizedBox(width: 14),
+                              SizedBox(width: 14.w),
 
                               Text(
                                 num.toString(),
-                                style: const TextStyle(
-                                  fontSize: 14,
+                                style: TextStyle(
+                                  fontSize: 14.sp,
                                   fontWeight: FontWeight.w500,
-                                  color: Color(0xff181725),
+                                  color: const Color(0xff181725),
                                 ),
                               ),
 
-                              const SizedBox(width: 14),
+                              SizedBox(width: 14.w),
 
                               Container(
-                                width: 45,
-                                height: 45,
+                                width: 45.w,
+                                height: 45.h,
                                 decoration: BoxDecoration(
                                   border: Border.all(
                                     color: const Color(0xffE2E2E2),
                                   ),
-                                  borderRadius: BorderRadius.circular(17),
+                                  borderRadius: BorderRadius.circular(17.r),
                                 ),
-                                child: const Icon(
+                                child: Icon(
                                   Icons.add,
-                                  size: 35,
-                                  color: Color(0xff53B175),
+                                  size: 35.sp,
+                                  color: const Color(0xff53B175),
                                 ),
                               ),
                             ],
                           ),
                         ),
+
                         Text(
                           '\$$price',
-                          style: const TextStyle(
-                            fontSize: 18,
+                          style: TextStyle(
+                            fontSize: 18.sp,
                             fontWeight: FontWeight.bold,
-                            color: Color(0xff181725),
+                            color: const Color(0xff181725),
                           ),
                         ),
                       ],
@@ -142,7 +144,7 @@ class CartOption extends StatelessWidget {
           ),
         ),
 
-        Divider(thickness: 1.5, color: Color(0xffE2E2E2)),
+        Divider(thickness: 1.5.w, color: const Color(0xffE2E2E2)),
       ],
     );
   }

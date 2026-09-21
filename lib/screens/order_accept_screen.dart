@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:grocery_app/screens/bottom_nav_bar_screen.dart';
 import 'package:grocery_app/widgets/custom_button.dart';
 
@@ -14,48 +15,56 @@ class _OrderAcceptScreenState extends State<OrderAcceptScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 24),
+        padding: EdgeInsets.symmetric(horizontal: 24.w),
         child: Column(
           children: [
-            SizedBox(height: 150),
+            SizedBox(height: 150.h),
+
             Center(
               child: Image.asset(
                 "assets/images/order_accept.png",
-                height: 240,
-                width: 270,
+                height: 240.h,
+                width: 270.w,
               ),
             ),
-            SizedBox(height: 66),
+
+            SizedBox(height: 66.h),
+
             Text(
               "Your Order has been",
               style: TextStyle(
-                fontSize: 28,
+                fontSize: 28.sp,
                 fontWeight: FontWeight.w600,
-                color: Color(0xff181725),
+                color: const Color(0xff181725),
               ),
             ),
+
             Text(
               "accepted",
               style: TextStyle(
-                fontSize: 28,
+                fontSize: 28.sp,
                 fontWeight: FontWeight.w600,
-                color: Color(0xff181725),
+                color: const Color(0xff181725),
               ),
             ),
-            SizedBox(height: 20),
+
+            SizedBox(height: 20.h),
+
             Text(
               textAlign: TextAlign.center,
               "Your items has been placcd and is on \nit's way to being processed",
               style: TextStyle(
-                fontSize: 16,
+                fontSize: 16.sp,
                 fontWeight: FontWeight.w400,
-                color: Color(0xff7C7C7C),
+                color: const Color(0xff7C7C7C),
               ),
             ),
 
-            SizedBox(height: 134),
+            SizedBox(height: 134.h),
+
             CustomButton(text: "Track Order", onTap: () {}),
-            SizedBox(height: 24),
+
+            SizedBox(height: 24.h),
 
             InkWell(
               onTap: () {
@@ -70,9 +79,9 @@ class _OrderAcceptScreenState extends State<OrderAcceptScreen> {
               child: Text(
                 "Back to home",
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: 18.sp,
                   fontWeight: FontWeight.w600,
-                  color: Color(0xff181725),
+                  color: const Color(0xff181725),
                 ),
               ),
             ),

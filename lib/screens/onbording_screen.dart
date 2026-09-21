@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:grocery_app/screens/login_screen.dart';
 import 'package:grocery_app/widgets/custom_button.dart';
 
@@ -11,28 +12,23 @@ class OnbordingScreen extends StatelessWidget {
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage("assets/images/onbording.png"),
             fit: BoxFit.cover,
           ),
         ),
         child: Padding(
-          padding: const EdgeInsets.only(
-            top: 485,
-            left: 30,
-            right: 30,
-            // bottom: 90,
-          ),
+          padding: EdgeInsets.only(top: 485.h, left: 30.w, right: 30.w),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Image.asset("assets/images/carrot2.png"),
-              SizedBox(height: 20),
+              SizedBox(height: 20.h),
               Text(
                 "Welcome",
                 style: TextStyle(
-                  fontSize: 40,
+                  fontSize: 40.sp,
                   fontWeight: FontWeight.w600,
                   color: Colors.white,
                 ),
@@ -40,21 +36,21 @@ class OnbordingScreen extends StatelessWidget {
               Text(
                 "to our store",
                 style: TextStyle(
-                  fontSize: 40,
+                  fontSize: 40.sp,
                   fontWeight: FontWeight.w600,
                   color: Colors.white,
                 ),
               ),
-              SizedBox(height: 8),
+              SizedBox(height: 8.h),
               Text(
                 "Get your groceries in as fast as one hour",
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 16.sp,
                   fontWeight: FontWeight.w400,
-                  color: Color(0xffFCFCFC),
+                  color: const Color(0xffFCFCFC),
                 ),
               ),
-              SizedBox(height: 50),
+              SizedBox(height: 50.h),
               CustomButton(
                 text: "Get Started",
                 onTap: () {

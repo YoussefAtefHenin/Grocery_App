@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:grocery_app/models/product_model.dart';
 import 'package:grocery_app/screens/filter_screen.dart';
 import 'package:grocery_app/widgets/product_item.dart';
@@ -11,21 +12,21 @@ class BeveragesScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 25),
+          padding: EdgeInsets.symmetric(horizontal: 25.w),
           child: Column(
             children: [
-              SizedBox(height: 8),
+              SizedBox(height: 8.h),
               Row(
                 children: [
-                  Icon(Icons.arrow_back_ios),
+                  Icon(Icons.arrow_back_ios, size: 24.sp),
                   Expanded(
                     child: Center(
                       child: Text(
                         "Beverages",
                         style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 20.sp,
                           fontWeight: FontWeight.bold,
-                          color: Color(0xff181725),
+                          color: const Color(0xff181725),
                         ),
                       ),
                     ),
@@ -39,19 +40,23 @@ class BeveragesScreen extends StatelessWidget {
                         ),
                       );
                     },
-                    borderRadius: BorderRadius.circular(20),
-                    child: Icon(Icons.tune, size: 25, color: Color(0xff181725)),
+                    borderRadius: BorderRadius.circular(20.r),
+                    child: Icon(
+                      Icons.tune,
+                      size: 25.sp,
+                      color: const Color(0xff181725),
+                    ),
                   ),
                 ],
               ),
-              SizedBox(height: 26),
+              SizedBox(height: 26.h),
               Expanded(
                 child: GridView.builder(
                   itemCount: Products.length,
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
-                    crossAxisSpacing: 10,
-                    mainAxisSpacing: 10,
+                    crossAxisSpacing: 10.w,
+                    mainAxisSpacing: 10.h,
                     childAspectRatio: 0.68,
                   ),
                   itemBuilder: (context, index) {

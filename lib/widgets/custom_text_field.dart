@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomTextField extends StatelessWidget {
   final String labelText;
@@ -23,10 +24,10 @@ class CustomTextField extends StatelessWidget {
       obscureText: obscureText,
       decoration: InputDecoration(
         enabledBorder: UnderlineInputBorder(
-          borderSide: BorderSide(color: Color(0xffE2E2E2)),
+          borderSide: BorderSide(color: const Color(0xffE2E2E2), width: 1.w),
         ),
         focusedBorder: UnderlineInputBorder(
-          borderSide: BorderSide(color: Color(0xff53B175)),
+          borderSide: BorderSide(color: const Color(0xff53B175), width: 1.w),
         ),
         labelText: labelText,
         suffix: suffix,
