@@ -1,7 +1,5 @@
 
 # Grocery App As Ui
-<img width="887" height="352" alt="Screenshot 2026-09-22 044904" src="https://github.com/user-attachments/assets/773fd68a-3cae-49d0-b6fc-d6b585fbd935" />
-<img width="792" height="327" alt="Screenshot 2026-09-22 044849" src="https://github.com/user-attachments/assets/bc377227-cf78-4d39-8f5a-32da9ea776ec" />
 
 <img width="377" height="813" alt="Screenshot 2026-09-07 172507" src="https://github.com/user-attachments/assets/0eb58006-b8bf-469e-8afc-b634fa562c42" />
 <img width="377" height="822" alt="Screenshot 2026-09-07 172529" src="https://github.com/user-attachments/assets/c3aab3c6-44cc-4bf5-9b86-f0ab780f28c8" />
@@ -24,3 +22,5 @@
 <img width="365" height="811" alt="Screenshot 2026-09-07 173038" src="https://github.com/user-attachments/assets/81049b23-82d5-48f3-995a-ab05f4699448" />
 <img width="377" height="812" alt="Screenshot 2026-09-07 173051" src="https://github.com/user-attachments/assets/15f8cea7-c37e-4533-a119-f32206c78705" />
 
+<img width="792" height="327" alt="Screenshot 2026-09-22 044849" src="https://github.com/user-attachments/assets/bc377227-cf78-4d39-8f5a-32da9ea776ec" />
+<img width="887" height="352" alt="Screenshot 2026-09-22 044904" src="https://github.com/user-attachments/assets/773fd68a-3cae-49d0-b6fc-d6b585fbd935" />
