@@ -15,17 +15,17 @@ The application is designed to support both **Portrait** and **Landscape** orien
 
 The application supports responsive layouts in landscape orientation.
 
-#### Home Screen
 
-<img width="1103" height="487" alt="Home Screen Landscape" src="https://github.com/user-attachments/assets/882fd067-4786-4e3a-8691-a98dd0523015" />
-
-#### Explore Screen
-
-<img width="792" height="327" alt="Explore Screen Landscape" src="https://github.com/user-attachments/assets/e6d2bb70-5db2-4a6e-a70e-9a9613bc262e" />
 
 #### Account Screen
 
+<img width="792" height="327" alt="Explore Screen Landscape" src="https://github.com/user-attachments/assets/e6d2bb70-5db2-4a6e-a70e-9a9613bc262e" />
+
+#### Explore Screen
+
 <img width="887" height="352" alt="Account Screen Landscape" src="https://github.com/user-attachments/assets/6220bca1-c2ac-4b29-b72a-f9ca2e56e60f" />
+
+
 
 ---
 
